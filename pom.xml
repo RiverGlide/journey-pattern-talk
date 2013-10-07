@@ -41,7 +41,7 @@
     </scm>
 
     <modules>
-        <module>page-object-example</module>
         <module>petclinic</module>
+        <module>petclinic-acceptance</module>
     </modules>
 </project>
