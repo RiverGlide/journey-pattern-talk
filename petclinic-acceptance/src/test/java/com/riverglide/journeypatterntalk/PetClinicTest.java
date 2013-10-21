@@ -1,11 +1,13 @@
 package com.riverglide.journeypatterntalk;
 
+import com.riverglide.journeypatterntalk.seleniumpageobject.HomePage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
+import org.openqa.selenium.support.PageFactory;
 
 import java.util.concurrent.TimeUnit;
 
@@ -18,20 +20,21 @@ public class PetClinicTest {
     private final static String baseUrl = "http://localhost:8888/petclinic/";
 
     @Before
-    public void setUp() throws Exception {
+    public void set_up() throws Exception {
         driver = new PhantomJSDriver(desiredCapabilities());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
     @Test
-    public void should_have_a_correct_title() throws Exception {
+    public void should_have_a_place_to_start() throws Exception {
         driver.get(baseUrl);
+        HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 
-        assertThat(driver.getTitle(), is("PetClinic :: a Spring Framework demonstration"));
+        assertThat(homePage.getWelcomeMessage(), is("Welcome"));
     }
 
     @After
-    public void tearDown() throws Exception {
+    public void tear_down() throws Exception {
         driver.quit();
     }
 
