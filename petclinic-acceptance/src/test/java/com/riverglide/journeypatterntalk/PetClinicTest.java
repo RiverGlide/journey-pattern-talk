@@ -1,10 +1,13 @@
 package com.riverglide.journeypatterntalk;
 
+import com.riverglide.journeypatterntalk.seleniumpageobject.FindOwnersPage;
 import com.riverglide.journeypatterntalk.seleniumpageobject.HomePage;
+import com.riverglide.journeypatterntalk.seleniumpageobject.OwnersPage;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.phantomjs.PhantomJSDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.openqa.selenium.support.PageFactory;
@@ -31,6 +34,17 @@ public class PetClinicTest {
         HomePage homePage = PageFactory.initElements(driver, HomePage.class);
 
         assertThat(homePage.getWelcomeMessage(), is("Welcome"));
+    }
+
+    @Test
+    public void should_find_all_owners() throws Exception {
+        driver.get(baseUrl+"owners/find.html");
+        FindOwnersPage findOwners = PageFactory.initElements(driver, FindOwnersPage.class);
+
+        findOwners.findAllOwners();
+
+        OwnersPage owners = PageFactory.initElements(driver, OwnersPage.class);
+        assertThat(owners.numberOfOwners(), is(10));
     }
 
     @After
