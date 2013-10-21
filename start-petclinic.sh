@@ -1,3 +1,3 @@
 #!/bin/bash
 
-mvn -f petclinic/pom.xml tomcat7:run
+mvn -f petclinic/pom.xml clean tomcat7:run
