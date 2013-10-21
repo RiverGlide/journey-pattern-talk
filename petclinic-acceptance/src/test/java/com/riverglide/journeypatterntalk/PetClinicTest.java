@@ -17,7 +17,7 @@ import static org.junit.Assert.assertThat;
 public class PetClinicTest {
 
     private WebDriver driver;
-    private final static String baseUrl = "http://localhost:8888/petclinic/";
+    private final static String baseUrl = "http://localhost:9966/petclinic/";
 
     @Before
     public void set_up() throws Exception {

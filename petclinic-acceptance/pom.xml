@@ -121,8 +121,8 @@
                     <configuration>
                         <home>${project.build.directory}/catalina-base</home>
                         <properties>
-                            <cargo.servlet.port>8888</cargo.servlet.port>
-                            <cargo.tomcat.ajp.port>8889</cargo.tomcat.ajp.port>
+                            <cargo.servlet.port>9966</cargo.servlet.port>
+                            <cargo.tomcat.ajp.port>9966</cargo.tomcat.ajp.port>
                             <cargo.logging>${cargo.logging}</cargo.logging>
                         </properties>
                     </configuration>
