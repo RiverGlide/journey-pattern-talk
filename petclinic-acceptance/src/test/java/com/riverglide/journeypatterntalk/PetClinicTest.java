@@ -19,12 +19,7 @@ public class PetClinicTest {
 
     @Before
     public void setUp() throws Exception {
-
-        DesiredCapabilities dCaps = new DesiredCapabilities();
-        dCaps.setJavascriptEnabled(true);
-        dCaps.setCapability("takesScreenshot", false);
-
-        driver = new PhantomJSDriver(dCaps);
+        driver = new PhantomJSDriver(desiredCapabilities());
         driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
     }
 
@@ -38,5 +33,12 @@ public class PetClinicTest {
     @After
     public void tearDown() throws Exception {
         driver.quit();
+    }
+
+    private DesiredCapabilities desiredCapabilities() {
+        DesiredCapabilities dCaps = new DesiredCapabilities();
+        dCaps.setJavascriptEnabled(true);
+        dCaps.setCapability("takesScreenshot", false);
+        return dCaps;
     }
 }
