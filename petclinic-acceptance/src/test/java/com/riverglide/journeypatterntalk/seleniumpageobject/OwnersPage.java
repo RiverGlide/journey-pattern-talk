@@ -6,7 +6,7 @@ import org.openqa.selenium.support.FindBy;
 
 public class OwnersPage {
 
-    @FindBy(xpath="//*[@id=\"owners\"]/tbody")
+    @FindBy(css="#owners tbody")
     private WebElement owners;
 
     public int numberOfOwners() {

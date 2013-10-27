@@ -7,7 +7,7 @@ import org.openqa.selenium.support.PageFactory;
 
 public class FindOwnersPage {
 
-    @FindBy(xpath="//*[@id=\"search-owner-form\"]/fieldset/div[2]/button")
+    @FindBy(css="#search-owner-form button")
     private WebElement searchButton;
     private WebDriver driver;
 
