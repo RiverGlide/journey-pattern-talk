@@ -1,0 +1,12 @@
+language: java
+jdk:
+  - oraclejdk6
+
+env:
+  - MAVEN_OPTS="-Xmx2048m"
+
+before_script:
+  - which phantomjs
+  - phantomjs --version
+
+script: mvn clean verify
