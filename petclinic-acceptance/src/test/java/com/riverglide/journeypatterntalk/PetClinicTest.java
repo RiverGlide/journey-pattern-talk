@@ -41,9 +41,8 @@ public class PetClinicTest {
         driver.get(baseUrl+"owners/find.html");
         FindOwnersPage findOwners = PageFactory.initElements(driver, FindOwnersPage.class);
 
-        findOwners.findAllOwners();
+        OwnersPage owners = findOwners.findAllOwners();
 
-        OwnersPage owners = PageFactory.initElements(driver, OwnersPage.class);
         assertThat(owners.numberOfOwners(), is(10));
     }
 
