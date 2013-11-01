@@ -9,6 +9,7 @@ import net.masterthought.hermon.WebDriverScreens;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
+import org.openqa.selenium.By;
 
 import static org.hamcrest.core.Is.is;
 import static org.junit.Assert.assertThat;
@@ -37,7 +38,7 @@ public class PetClinicWithHermonScreensTest {
     public void should_find_all_owners() throws Exception {
         Navigate.to(findOwnersScreen.getUrl());
         Click.on(findOwnersScreen.searchButton);
-        assertThat(Count.all(ownersScreen.owners), is(1));
+        assertThat(Count.allWithin(ownersScreen.ownersTable, By.tagName("tr")), is(10));
     }
 
     @After

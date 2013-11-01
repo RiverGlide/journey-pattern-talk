@@ -24,6 +24,14 @@ public class Find {
         return fluentWait(Driver.getDriver()).until(elementsAreFound(getBy(screenElement)));
     }
 
+    public static List<WebElement> allWithin(ScreenElement baseScreenElement, ScreenElement screenElements) {
+        return allWithin(baseScreenElement, getBy(screenElements));
+    }
+
+    public static List<WebElement> allWithin(ScreenElement baseScreenElement, By by) {
+        return the(baseScreenElement).findElements(by);
+    }
+
     private static By getBy(ScreenElement screenElement) {
         return ((WebDriverLocator)screenElement.getLocator()).value();
     }

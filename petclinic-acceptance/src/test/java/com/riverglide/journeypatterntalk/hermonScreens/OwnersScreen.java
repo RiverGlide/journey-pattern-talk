@@ -7,8 +7,9 @@ import net.masterthought.hermon.screens.WebScreen;
 
 public class OwnersScreen extends WebScreen{
 
-    @Alias("All owners")
+    @Alias("All owners table")
     @LocateBy(css="#owners tbody")
-    public ScreenElement owners;
+    public ScreenElement ownersTable;
+
 
 }
