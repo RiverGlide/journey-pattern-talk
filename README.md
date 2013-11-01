@@ -1,5 +1,6 @@
 journey-pattern-talk
 ====================
+[![Build Status](https://travis-ci.org/screenplay/journey-pattern-talk.png?branch=master)](https://travis-ci.org/screenplay/journey-pattern-talk)
 
 Planning to illustrate challenges teams face with PageObjects and how to refactor to the 'Journey' Pattern.
 
