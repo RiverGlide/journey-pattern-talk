@@ -28,7 +28,7 @@ public class Find {
         return ((WebDriverLocator)screenElement.getLocator()).value();
     }
 
-    static Function<WebDriver, WebElement> elementIsFound(final By locator) throws NoSuchElementException {
+    private static Function<WebDriver, WebElement> elementIsFound(final By locator) throws NoSuchElementException {
         return new Function<WebDriver, WebElement>() {
             public WebElement apply(WebDriver driver) {
                 return driver.findElement(locator);
@@ -36,7 +36,7 @@ public class Find {
         };
     }
 
-    static Function<WebDriver, List<WebElement>> elementsAreFound(final By locator) throws NoSuchElementException {
+    private static Function<WebDriver, List<WebElement>> elementsAreFound(final By locator) throws NoSuchElementException {
         return new Function<WebDriver, List<WebElement>>() {
             public List<WebElement> apply(WebDriver driver) {
                 return driver.findElements(locator);
@@ -44,7 +44,7 @@ public class Find {
         };
     }
 
-    public static FluentWait<WebDriver> fluentWait(WebDriver driver){
+    private static FluentWait<WebDriver> fluentWait(WebDriver driver){
         return  new FluentWait<WebDriver>(driver)
                 .withTimeout(5, TimeUnit.SECONDS)
                 .pollingEvery(1, TimeUnit.SECONDS)
