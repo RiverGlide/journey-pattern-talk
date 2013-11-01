@@ -29,14 +29,12 @@ public class PetClinicWithHermonScreensTest {
 
     @Test
     public void should_have_a_place_to_start() throws Exception {
-        HomeScreen homeScreen = WebDriverScreens.init(new HomeScreen());
         Navigate.to(homeScreen.getUrl());
         assertThat(Read.the(homeScreen.welcomeMessage), is("Welcome"));
     }
 
     @Test
     public void should_find_all_owners() throws Exception {
-        FindOwnersScreen findOwnersScreen = WebDriverScreens.init(new FindOwnersScreen());
         Navigate.to(findOwnersScreen.getUrl());
         Click.on(findOwnersScreen.searchButton);
         assertThat(Count.all(ownersScreen.owners), is(1));
