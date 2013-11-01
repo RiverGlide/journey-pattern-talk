@@ -5,6 +5,6 @@ import net.masterthought.hermon.elements.ScreenElement;
 public class Count {
 
     public static Integer all(ScreenElement screenElement){
-        return Convert.toWebElementList(screenElement).size();
+        return Find.all(screenElement).size();
     }
 }

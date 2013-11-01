@@ -5,6 +5,6 @@ import net.masterthought.hermon.elements.ScreenElement;
 public class Click {
 
     public static void on(ScreenElement screenElement){
-        Convert.toWebElement(screenElement).click();
+        Find.the(screenElement).click();
     }
 }
