@@ -32,6 +32,15 @@
             <organizationUrl>http://smartcodeltd.co.uk</organizationUrl>
             <timezone>Europe/London</timezone>
         </developer>
+        <developer>
+            <id>mamalisk</id>
+            <name>Kostas Mamalis</name>
+            <email>kostas@masterthought.net</email>
+            <organization>MasterThought</organization>
+            <organizationUrl>http://masterthought.net</organizationUrl>
+            <timezone>Europe/London</timezone>
+        </developer>
+
     </developers>
 
     <scm>
