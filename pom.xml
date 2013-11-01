@@ -50,6 +50,7 @@
     </scm>
 
     <modules>
+        <module>hermon/hermon-screens</module>
         <module>petclinic</module>
         <module>petclinic-acceptance</module>
     </modules>
